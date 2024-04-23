@@ -1,0 +1,496 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.max-width {
+    max-width: 1200px;
+    margin: auto;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+   
+
+nav {
+    background-color: #1e272e;
+    padding: 0px 10px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 111;
+    box-shadow: rgb(236, 236, 236) 0px 10px 20px -10px;
+}
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 200px;
+    height: 60px;
+
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.searchBar {
+    display: flex;
+    gap: 8px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+input {
+    height: 100%;
+    padding: 0px 8px;
+    border: none;
+    outline: none;
+    background: unset;
+    color: white;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: unset;
+    cursor: pointer;
+    color: white;
+
+}
+
+
+/*  bannar section start*/
+main {
+    padding-top: 60px;
+}
+
+.hero-section {
+    width: 100%;
+    height: 580px;
+    overflow: hidden;
+    background-color: #1e272e;
+    position: relative;
+
+}
+
+.hero-section .overley {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-section .overley {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section .overley .bannerText {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    border-bottom: 3px solid white;
+    padding: 10px;
+    border-radius: 55px;
+
+
+}
+
+.bannerText {
+    animation: moveUpDown 2s infinite alternate;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-20px);
+        /* Adjust the value to move the text up or down */
+    }
+}
+
+.hero-section img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*-----------------------------------------------*/
+
+.popupContainer {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    /* Optional: Set a maximum width */
+    max-height: 80vh;
+    /* Adjust height as needed */
+    align-items: center;
+    z-index: 1;
+    overflow-y: auto;
+    border-radius: 5px;
+    padding-top: 50px;
+
+    box-shadow: rgba(251, 164, 2, 0.913) 0px 30px 90px;
+
+    /* Enable vertical scrolling if needed */
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.popupContent {
+    padding-top: 2rem;
+    background: rgb(20, 25, 30);
+    border-radius: 5px;
+    position: relative;
+}
+
+.closeButton {
+    font-size: 2rem;
+    color: white;
+    position: fixed;
+    top: 10;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+
+/*-------------------------------------------------*/
+/*movieDetailsSection*/
+#movieDetailsSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 1rem;
+    z-index: -1;
+}
+
+#movieCardContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+
+}
+
+.movie-section {
+    background-color: #1e272e;
+    padding: 4rem;
+    position: relative;
+    border-bottom: 2px solid white;
+}
+
+.morebtn-wrapper {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#morebtn {
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background: orange;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease-in;
+}
+
+#morebtn:hover {
+    background: rgb(215, 140, 0);
+}
+
+
+.poster {
+    width: 40%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.poster img {
+
+    object-fit: cover;
+    width: 100%;
+
+}
+
+.details {
+    font-family: sans-serif;
+    width: 60%;
+    color: white;
+    padding: 25px 0;
+}
+
+
+.movie-name {
+   
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.Rating {
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.tabs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 15px;
+}
+
+.tabs-container .tab {
+    padding: 8px;
+    background: orange;
+    border-radius: 6px;
+    color: black;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* movie - card - contaniner css*/
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(54, 53, 53);
+    background: #2f3640;
+    overflow: hidden;
+    color: gray;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.3s ease-in;
+}
+
+.card img:hover {
+    transform: scale(1.09)
+}
+
+.card-content {
+    padding: 16px;
+
+}
+
+.card-content h2 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.card-content p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.movie-section h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+    position: relative;
+    display: inline-block;
+
+}
+
+.movie-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+.showTabsContainer{
+    border: 2px solid white;
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+    border-radius: 15px;
+
+}
+.showTabsContainer button {
+    padding: 8px 20px;
+    cursor: pointer;
+    overflow: hidden;
+    background: #f1f1f1; /* Default background color */
+    color: #333; /* Default text color */
+    border: none;
+    outline: none;
+}
+
+.showTabsContainer button.active {
+    background: rgb(255, 157, 0);
+    color: black;
+    font-weight: bold;
+}
+
+.Heading::after {
+    content: "";
+    width: 200px;
+    height: 4px;
+    bottom: -10px;
+    left: 0;
+    position: absolute;
+    background: red;
+    border-radius: 5px;
+}
+
+.Heading::before {
+    content: "";
+    width: 150px;
+    height: 4px;
+    bottom: -20px;
+    left: 0;
+    position: absolute;
+    background: red;
+    border-radius: 5px;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    background-color: #1e272e;
+    border-top: 2px so2id white;
+}
+
+.footer-text {
+    text-align: center;
+    color: white;
+}
+
+/*media query*/
+@media (max-width:1000px) {
+    .wrapper {
+        min-width: 100%;
+    }
+
+    .wrapper,
+    .poster,
+    .details {
+        width: 50%;
+    }
+
+    .popupContainer {
+        width: 95%;
+    }
+
+    /* .poster{
+        display: none;
+    } */
+
+}
+
+@media (max-width:600px) {
+    .logo {
+        width: 150px;
+
+
+    }
+
+    .searchBar {
+        width: 200px;
+        padding: 5px;
+    }
+
+    input {
+        height: 100%;
+        width: 100%;
+        padding: 0px 5px;
+
+    }
+
+    .hero-section {
+        height: 280px;
+    }
+
+    .hero-section .overley .bannerText {
+        font-size: 1.5rem;
+    }
+
+    .wrapper {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .wrapper,
+    .poster,
+    .details {
+        width: 100%;
+    }
+
+    .popupContainer {
+        width: 95%;
+    }
+    #movieDetailsSection {
+       flex-direction: column;
+       gap: 10px;
+    }
+    .poster {
+       height: 200px;
+       width: 200px;
+       border-radius: 5px;
+       overflow: hidden;
+    }
+    .poster img{
+        height: 100%;
+        width: 100%;
+    }
+
+    .details {
+        width: 100%;
+    }
+
+    .movie-section {
+        padding: 1rem;
+
+    }
+    .card img {
+       
+        height: 300px;
+        
+    }
+
+
+}
